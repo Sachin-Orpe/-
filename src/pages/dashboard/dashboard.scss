@@ -1,3 +1,133 @@
-page-home {
-
-}
+dashboard {
+    
+        .dashboard-stat {
+            display: block;
+            margin-bottom: 25px;
+            overflow: hidden;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+        }
+        .details {
+            position: absolute;
+            right: 15px;
+            padding-right: 15px;
+        }
+        .dashboard-stat .more {
+            clear: both;
+            display: block;
+            padding: 6px 10px 6px 10px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 11px;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+        }
+    
+        .dashboard-stat .visual > i {
+            margin-left: -35px;
+            font-size: 110px;
+            line-height: 110px;
+        }
+        
+    
+        .visual {
+            width: 80px;
+            height: 80px;
+            display: block;
+            float: left;
+            padding-top: 10px;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-size: 35px;
+            line-height: 35px;
+        }
+    
+        .dashboard-stat.blue-madison {
+            background-color: #578ebe;
+        }
+       
+        .dashboard-stat.blue-madison .details .desc {
+            color: #FFFFFF;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        
+        .dashboard-stat.blue-madison .more {
+            color: #FFFFFF;
+            background-color: #4884b8;
+        }
+    
+        .dashboard-stat.blue-madison .visual > i {
+            color: #FFFFFF;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+    
+        .dashboard-stat.red-intense {
+            background-color: #e04a49;
+        }
+        
+        .dashboard-stat.red-intense .more {
+            color: #FFFFFF;
+            background-color: #e04a49;
+        }
+        .dashboard-stat.red-intense .visual > i {
+            color: #FFFFFF;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+       
+        .dashboard-stat.red-intense .details .desc {
+            color: #FFFFFF;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        
+        // investmentdemand
+        .dashboard-stat.green-haze {
+            background-color: #44b6ae;
+        }
+        
+        .dashboard-stat.green-haze .more {
+            color: #FFFFFF;
+            background-color: #44b6ae;
+        }
+        .dashboard-stat.green-haze .visual > i {
+            color: #FFFFFF;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+    
+        .dashboard-stat.green-haze .details .desc {
+            color: #FFFFFF;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    
+        //Financial follow-up
+        .dashboard-stat.purple-plum {
+            background-color: #7c699f;
+        }
+        
+        .dashboard-stat.purple-plum .more {
+            color: #FFFFFF;
+            background-color: #7c699f;
+        }
+        .dashboard-stat.purple-plum .visual > i {
+            color: #FFFFFF;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+    
+        .dashboard-stat.purple-plum .details .desc {
+            color: #FFFFFF;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    
+    }
+    

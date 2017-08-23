@@ -1,52 +1,73 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Dashboard
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="">
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
-<ion-content padding>
- <ion-card color="primary">
-        <ion-card-header>
-            Investment Demand
-            <br/>
-        </ion-card-header>
-        <ion-card-content>
-            <h3>2016 & Previous</h3>
-            <br/>
-            <h3>2017</h3>  
-            <a href="#" (click)="goToPage(3)" >Go>></a>          
-        </ion-card-content>
-  </ion-card>
-      <ion-card color="primary">
-        <ion-card-header>
-            Budget
-            <br/>
-        </ion-card-header>
-        <ion-card-content>
-            <h3>2016 & Previous</h3>
-            <br/>
-            <h3>2017</h3>
-             <button ion-button (click)="goToPage(2)">Go>></button>
-        </ion-card-content>
-  </ion-card>
-      <ion-card color="primary">
-        <ion-card-header>
-            Plan
-            <br/>
-        </ion-card-header>
-        <ion-card-content>
-            <h3>2016 & Previous</h3>
-            <br/>
-            <h3>2017</h3>
-             <a href="#" (click)="goToPage(1)" >Go>></a>
-        </ion-card-content>
-  </ion-card>
+
+
+<ion-content>
+    <h1 col-12>
+        <i class="fa fa-home" aria-hidden="true"></i>&nbsp; Dashboard
+    </h1>
+    <div col-12>
+        <div class="dashboard-stat blue-madison" (click)="openPage('Plan')">
+            <div class="visual">
+                <i class="fa fa-edit"></i>
+            </div>
+            <div class="details" text-right>
+                <div class="desc">
+                    New plans : 7<br> Plans in process : 1<br> Validated plans : 5<br> Validated Amount : 1171 K Euro<br>
+                </div>
+            </div>
+            <button class="more" href="#">
+              Plan  <ion-icon name="arrow-round-forward"></ion-icon>
+          </button>
+        </div>
+        <div class="dashboard-stat red-intense" (click)="openPage('Budget')">
+            <div class="visual">
+                <i class="fa fa-edit"></i>
+            </div>
+            <div class="details" text-right>
+                <div class="desc">
+                    New budgets : 7<br> Budgets in process : 1<br> Validated budgets : 5<br> Validated Amount : 1171 K Euro<br>
+                </div>
+            </div>
+            <span class="more" href="#">
+            Budget  <ion-icon name="arrow-round-forward"></ion-icon>
+        </span>
+        </div>
+        <div class="dashboard-stat green-haze" (click)="openPage('Investment Demand')">
+            <div class="visual">
+                <i class="fa fa-edit"></i>
+            </div>
+            <div class="details" text-right>
+                <div class="desc">
+                    New Investment Demands : 7<br> Investment Demands in process : 1<br> Validated Investment Demands : 5<br>                    Validated Amount : 1171 K Euro<br>
+                </div>
+            </div>
+            <button class="more">
+            Investment Demands  <ion-icon name="arrow-round-forward"></ion-icon>
+        </button>
+        </div>
+        <div class="dashboard-stat purple-plum" (click)="openPage('Financial follow-up')">
+            <div class="visual">
+                <i class="fa fa-edit"></i>
+            </div>
+            <div class="details" text-right>
+                <div class="desc">
+                    Ordered : 7<br> Booked : 1<br> Committed : 5<br> RF1 : 108 K Euro RF3 : 267 K Euro<br>
+                </div>
+            </div>
+            <span class="more" href="#">
+            FINANCIAL FOLLOW-UP  <ion-icon name="arrow-round-forward"></ion-icon>
+        </span>
+        </div>
+    </div>
+
+    <div col-12>
+
+    </div>
 </ion-content>
-
-
-
-
