@@ -1,0 +1,65 @@
+<ion-header color="menu-dark">
+    <ion-navbar color="menu-dark">
+        <ion-row>
+            <ion-col col-1 text-left>
+                <button ion-button menuToggle icon-only>
+                    <ion-icon name='menu'></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-9>                
+                    <i class="fa fa-user fa-lg"></i>
+                   <ion-title>Investment Demand
+                     </ion-title>                            
+            </ion-col>
+            <ion-col col-2 text-right>
+                <ion-buttons end>
+                <button ion-button icon-only color="white-text" >
+                    <ion-icon name="more"></ion-icon>
+                </button>
+                </ion-buttons>
+            </ion-col> 
+        </ion-row>            
+        <ion-row>
+            <ion-col col-12>
+                <ion-searchbar [(ngModel)]="searchText" placeholder="Type Ref No/Title" [showCancelButton]="shouldShowCancel" (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
+                </ion-searchbar>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+<ion-content padding color="primary">
+    <ion-list [hidden]="searchText.length < 2" no-line>
+        <ion-item *ngFor="let item of filterdata">
+            <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}">
+                <h3>{{ item.ReferenceNo }} - {{ item.Title }}</h3>
+                <h5>{{ item.OrgName}} ({{item.TotalAmount}} K {{item.CurrencyName}}) </h5>
+            </div>
+        </ion-item>
+    </ion-list>
+      <div [hidden]="filterdata.length > 2">
+    <ion-card color="primary">
+        <ion-card-header>
+            Budget Total Amount
+            <br/>
+        </ion-card-header>
+        <ion-card-content>
+            <h3>2016 & Previous</h3>
+            <br/>
+            <h3>2017</h3>
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="secondary">
+        <ion-card-header>
+            ID Total Amount
+            <br/>
+        </ion-card-header>
+        <ion-card-content>
+            <h3>2016 & Previous</h3>
+            <br/>
+            <h3>2017</h3>
+            <br/>
+            <h3>2018 & After</h3>
+        </ion-card-content>
+    </ion-card>
+      </div>
+</ion-content>

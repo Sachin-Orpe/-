@@ -1,14 +1,67 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-menu [content]="content" >
+  <ion-header >
+    <ion-toolbar color="menu-dark">
+      <div padding>
+         <ion-icon ios="ios-person" md="md-person" style="font-size: 5.0em;color:white;" ></ion-icon>
+         <h1 style="font-size: 1.5em;color:white">
+              Sachin Orpe<br/>
+              <small>sachin.orpe@saint-gobain.com</small>
+         </h1>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list no-lines color="menu-light">
+      <ion-item color="menu-light">
+        <ion-label >Bussines Unit</ion-label>
+        <ion-select [(ngModel)]="BUID">
+          <ion-option *ngFor="let bu of BUList" value="{{bu.id}}">{{bu.name}}</ion-option>         
+        </ion-select>
+      </ion-item>
+      <ion-item>
+                  <ion-label>Year</ion-label>
+                    <ion-select [(ngModel)]="selectedYear">
+                        <ion-option *ngFor="let y of YearList" value="{{y.ID}}">{{y.Name}}</ion-option>
+                    </ion-select>
+      </ion-item>
+     
+      <button menuClose ion-item (click)="goToPage(0)" text-left color="menu-light" 
+      [class.selected]="0 === currentDocument">
+        <ion-icon ios="ios-paper" md="md-paper"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Dashboard
+      </button>
+      <button menuClose ion-item (click)="goToPage(1)" text-left color="menu-light" [class.selected]="1 === currentDocument">
+        <ion-icon ios="ios-create" md="md-create"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Plan
+      </button>
+    
+      <button menuClose ion-item (click)="goToPage(2)" text-left [class.selected]="2 === currentDocument">
+        <ion-icon ios="ios-card" md="md-card"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Budget
+      </button>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+      <button menuClose ion-item (click)="goToPage(3)" text-left [class.selected]="3 === currentDocument">
+        <ion-icon ios="ios-cash" md="md-cash"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Investment Demand
+      </button>
+
+      <button menuClose ion-item (click)="goToPage(4)" text-left [class.selected]="4 === currentDocument">
+        <ion-icon name="settings"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Account
+      </button>
+      
+      <button menuClose ion-item (click)="goToPage(5)" text-left>
+        <ion-icon name="log-out"></ion-icon>
+        &nbsp;&nbsp;&nbsp;Logout
+      </button>
+     
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav id="nav" [root]="rootPage1" #content swipeBackEnabled="false" padding></ion-nav>
+
+
+
+
+
+

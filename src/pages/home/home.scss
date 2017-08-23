@@ -1,3 +1,18 @@
-page-home {
+home{
 
+    $list-md-padding :2px;
+    .content
+    {
+        background-color: color($colors,menu-light);
+    }
+   
+    .label-md {
+	margin: 3px 3px 3px 0;
+    }
+    .item-md {
+    padding-left: 3px;
+    }
+    .selected{
+    background-color: color($colors,main-menu-selected);
+    }
 }

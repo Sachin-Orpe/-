@@ -1,0 +1,25 @@
+<ion-content>
+  <form>
+    <div text-center padding >
+      <img src="../assets/images/CapexLogo2.png" style="height:80px;">
+    </div>
+    <ion-list>
+       <ion-item color="menu-light">
+          <ion-label stacked>SGID</ion-label>
+          <ion-input type="text" [(ngModel)]="account.SGID" name="SGID" required></ion-input>
+
+        </ion-item>
+        <ion-item color="menu-light">
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password" required></ion-input>
+        </ion-item>
+      <ion-item padding color="menu-light">
+         <button ion-button padding color="primary" block (click)="doLogin()" [disabled]="account.SGID =='' || account.password ==''">Login</button>
+      </ion-item>
+      <ion-item text-right color="menu-light">
+        <a href="#"> >>Forgot Password ?</a>
+      </ion-item>
+      </ion-list>
+  </form>
+</ion-content>
+
