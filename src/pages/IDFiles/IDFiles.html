@@ -1,0 +1,12 @@
+<ion-content>
+<ion-title>ID Files</ion-title>
+<button (click)="addFile()">Add more</button>
+<ion-list *ngFor="let header of fileHeader;let i=index" no-lines>
+  <ion-list-header no-lines>
+   {{header.DocumentFileType}}
+  </ion-list-header>
+  <ion-item  no-lines>CapexFile{{i+1}}.xlsx</ion-item > 
+  <ion-item  no-lines>CapexFile{{i+2}}.xlsx</ion-item > 
+</ion-list>
+
+</ion-content>

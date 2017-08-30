@@ -59,7 +59,7 @@ $action-sheet-wp-background:#FFFFCC;
 $menu-ios-background:#FFFFCC;
 $searchbar-ios-padding-top : 0px;
 $searchbar-ios-input-search-icon-color : #244c5e;
-$searchbar-ios-input-height:5.9rem;
+$searchbar-ios-input-height:3.9rem;
 $list-ios-margin-left:15px;
 $list-ios-margin-right:15px;
 // App Material Design Variables
@@ -68,7 +68,7 @@ $list-ios-margin-right:15px;
 $menu-md-background:#FFFFCC;
 $searchbar-md-padding-top : 0px;
 $searchbar-md-input-search-icon-color : #244c5e;
-$searchbar-md-input-height:5.9rem;
+$searchbar-md-input-height:3.9rem;
 $list-md-margin-left:15px;
 $list-md-margin-right:15px;
 // App Windows Variables
@@ -77,7 +77,7 @@ $list-md-margin-right:15px;
 $menu-wp-background:#FFFFCC;
 $searchbar-wp-padding-top : 0px;
 $searchbar-wp-input-search-icon-color : #244c5e;
-$searchbar-wp-input-height:5.9rem;
+$searchbar-wp-input-height:3.9rem;
 $list-wp-margin-left:15px;
 $list-wp-margin-right:15px;
 // App Theme
@@ -103,6 +103,5 @@ $fa-version:'v3.2.1';
 
 // Fonts
 // --------------------------------------------------
-
 @import "roboto";
 @import "noto-sans";

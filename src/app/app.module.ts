@@ -11,14 +11,20 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PlanPage } from '../pages/plan/plan';
 import { BudgetPage } from '../pages/budget/budget';
 import { InvestmentDemandPage } from '../pages/investmentdemand/investmentdemand';
+import { InvestmentDemandDetailsPage } from '../pages/IDdetails/investmentdemanddetails';
+import { IDMainInfoPage } from '../pages/IDMainInfo/IDMainInfo';
+import { IDFilesPage } from '../pages/IDFiles/IDFiles';
+import { IDApprovalListPage } from '../pages/IDApprovalList/IDApprovalList';
+import { IDPlanningDetailsPage } from '../pages/IDPlanningDetails/IDPlanningDetails';
 
-
+import {SharedService} from '../shared/sharedservice';
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,HomePage,
     DashboardPage,
-    PlanPage,BudgetPage,InvestmentDemandPage
+    PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage
+    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -28,12 +34,13 @@ import { InvestmentDemandPage } from '../pages/investmentdemand/investmentdemand
   entryComponents: [
     MyApp,
     LoginPage,HomePage,
-    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage    
+    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage
+    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage  
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},SharedService
   ]
 })
 export class AppModule {}

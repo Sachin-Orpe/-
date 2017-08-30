@@ -29,8 +29,8 @@
 </ion-header>
 <ion-content padding color="primary">
     <ion-list [hidden]="searchText.length < 2" no-line>
-        <ion-item *ngFor="let item of filterdata">
-            <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}">
+        <ion-item *ngFor="let item of filterdata" (click)="goToDetails(item)">
+            <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}" >
                 <h3>{{ item.ReferenceNo }} - {{ item.Title }}</h3>
                 <h5>{{ item.OrgName}} ({{item.TotalAmount}} K {{item.CurrencyName}}) </h5>
             </div>

@@ -1,0 +1,59 @@
+<ion-content>    
+<form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+      <ion-item no-lines>
+        <ion-label>Reference No</ion-label>
+        <ion-label>{{mainInfoObj.ReferenceNo}}</ion-label>
+      </ion-item>
+     <ion-item>
+        <ion-label>Year</ion-label>
+        <ion-label>{{mainInfoObj.Year}}</ion-label>
+      </ion-item>
+    <ion-item>
+        <ion-label>Title </ion-label>
+        <ion-label>{{mainInfoObj.Title}}</ion-label>
+      </ion-item>
+    <ion-item>
+        <ion-label>Organization </ion-label>
+        <ion-label>{{mainInfoObj.OrgName}}</ion-label>
+      </ion-item>
+    <ion-item>
+        <ion-label>Project Level </ion-label>
+        <ion-label>{{mainInfoObj.ProjectLevelName}}</ion-label>
+      </ion-item>
+    <ion-item>
+        <ion-label>Project Type </ion-label>
+        <ion-label>{{mainInfoObj.ProjectTypeName}}</ion-label>
+      </ion-item>
+    <ion-item>
+        <ion-label>Class </ion-label>
+        <ion-label>{{mainInfoObj.ClassName}}</ion-label>
+      </ion-item>
+     <ion-item>
+        <ion-label>Domain  </ion-label>
+        <ion-label>{{mainInfoObj.DomainName}}</ion-label>
+      </ion-item>
+     <ion-item>
+        <ion-label>Family  </ion-label>
+        <ion-label>{{mainInfoObj.FamilyName}}</ion-label>
+      </ion-item>
+     <ion-item>
+        <ion-label>Activity  </ion-label>
+        <ion-label>{{mainInfoObj.ActivityName}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Equipment  </ion-label>
+        <ion-label>{{mainInfoObj.Year}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>End Market   </ion-label>
+        <ion-label>{{mainInfoObj.EndMarketName}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Currency   </ion-label>
+        <ion-label>{{mainInfoObj.CurrencyName}}</ion-label>
+      </ion-item> <ion-item>
+        <ion-label>Budget Type  </ion-label>
+        <ion-label>{{mainInfoObj.BudgetTypeName}}</ion-label>
+      </ion-item>
+    </form>
+</ion-content>

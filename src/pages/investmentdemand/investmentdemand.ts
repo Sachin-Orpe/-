@@ -1,7 +1,10 @@
 import { Component,OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { InvestmentDemandDetailsPage } from '../IDdetails/investmentdemanddetails';
+
 import * as globalvars from '../global/globalVars';
+
 
 @Component({
             selector: 'investmentdemand',
@@ -44,8 +47,12 @@ getItems(ev: any) {
       this.filterdata = this.items.filter((item) => {
          return (String(item.ReferenceNo).toLowerCase().indexOf(val.toLowerCase()) > -1 || item.Title.toLowerCase().indexOf(val.toLowerCase()) > -1);
        });
-        console.log(this.filterdata);
     }
+  }
+
+  goToDetails(Record)
+  {
+    this.navCtrl.push(InvestmentDemandDetailsPage,{recordObj:Record});    
   }
 
 }
