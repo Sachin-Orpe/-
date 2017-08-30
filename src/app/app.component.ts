@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Component,OnInit } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-=======
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -15,7 +9,6 @@ import * as globalvars from '../pages/global/globalVars';
 import { MenuModel } from '../interfaces/MenuModel';
 import { AuthService } from '../providers/auth-service/auth-service'
 
->>>>>>> d3979f33aca540807e5f9f15df65daba2f381810
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { BudgetPage } from '../pages/budget/budget';
@@ -25,16 +18,6 @@ import { InvestmentDemandPage } from '../pages/investmentdemand/investmentdemand
 @Component({
   templateUrl: 'app.html'
 })
-<<<<<<< HEAD
-export class MyApp implements OnInit {
-  rootPage1:any;
-  rootPage:any = LoginPage;
-  BUName:string;
-  BUID: number = 1;
-  subscription:any;
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-=======
 
 export class MyApp {
   @ViewChild(Nav) nav: Nav;  
@@ -76,7 +59,6 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
->>>>>>> d3979f33aca540807e5f9f15df65daba2f381810
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();

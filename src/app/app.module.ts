@@ -38,25 +38,16 @@ import {SharedService} from '../shared/sharedservice';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-<<<<<<< HEAD
-    LoginPage,HomePage,
-    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage
-    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage  
-=======
     LoginPage,
     //HomePage,
-    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage    
->>>>>>> d3979f33aca540807e5f9f15df65daba2f381810
+    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,
+    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-<<<<<<< HEAD
-    {provide: ErrorHandler, useClass: IonicErrorHandler},SharedService
-=======
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService
->>>>>>> d3979f33aca540807e5f9f15df65daba2f381810
   ]
 })
 export class AppModule {}
