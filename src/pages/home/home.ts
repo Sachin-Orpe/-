@@ -13,7 +13,7 @@ import * as globalvars from '../global/globalVars';
 })
 
 export class HomePage {
-rootPage1 = DashboardPage;
+//rootPage1 = DashboardPage;
 
 pages: Array<{title: string, component: any}>;
 BUList:Array<{id:number,name:string}>;
@@ -51,38 +51,38 @@ BUID: number = 1;
    globalvars.buInfo.BUName=this.BUName;
    this.currentDocument = ID;
    console.log(globalvars.buInfo.BUID+" - "+globalvars.buInfo.BUName);
-      switch(ID) {
-       case 1: {
-          //statements;
-          this.rootPage1 = PlanPage;
-          break;
-       }
-       case 2: {
-          //statements;
-          this.rootPage1 = BudgetPage;
-          break;
-       }
-       case 3: {
-             //statements;
-             this.rootPage1 = InvestmentDemandPage;
-             break;
-          }
-            case 4: {
-             //statements;
-             this.rootPage1 = InvestmentDemandPage;
-             break;
-          }
-            case 5: {
-             //statements;
-            this.navCtrl.pop();
-             break;
-          }
-       default: {
-          //statements;
-          this.rootPage1 = DashboardPage;
-          break;
-       }
-    }
+    //   switch(ID) {
+    //    case 1: {
+    //       //statements;
+    //       this.rootPage1 = PlanPage;
+    //       break;
+    //    }
+    //    case 2: {
+    //       //statements;
+    //       this.rootPage1 = BudgetPage;
+    //       break;
+    //    }
+    //    case 3: {
+    //          //statements;
+    //          this.rootPage1 = InvestmentDemandPage;
+    //          break;
+    //       }
+    //         case 4: {
+    //          //statements;
+    //          this.rootPage1 = InvestmentDemandPage;
+    //          break;
+    //       }
+    //         case 5: {
+    //          //statements;
+    //         this.navCtrl.pop();
+    //          break;
+    //       }
+    //    default: {
+    //       //statements;
+    //       this.rootPage1 = DashboardPage;
+    //       break;
+    //    }
+    // }
 
   }
 
