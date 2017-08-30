@@ -14,6 +14,13 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { BudgetPage } from '../pages/budget/budget';
 import { PlanPage } from '../pages/plan/plan';
 import { InvestmentDemandPage } from '../pages/investmentdemand/investmentdemand';
+import { InvestmentDemandDetailsPage } from '../pages/IDdetails/investmentdemanddetails';
+import { IDFilesPage } from '../pages/IDFiles/IDFiles';
+import { IDPlanningDetailsPage } from '../pages/IDPlanningDetails/IDPlanningDetails';
+import { IDApprovalListPage } from '../pages/IDApprovalList/IDApprovalList';
+
+
+
 
 @Component({
   templateUrl: 'app.html'

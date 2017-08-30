@@ -28,7 +28,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding color="primary">
-    <ion-list [hidden]="searchText.length < 2" no-line>
+    <ion-list no-line>
         <ion-item *ngFor="let item of filterdata" (click)="goToDetails(item)">
             <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}" >
                 <h3>{{ item.ReferenceNo }} - {{ item.Title }}</h3>
@@ -36,30 +36,4 @@
             </div>
         </ion-item>
     </ion-list>
-      <div [hidden]="filterdata.length > 2">
-    <ion-card color="primary">
-        <ion-card-header>
-            Budget Total Amount
-            <br/>
-        </ion-card-header>
-        <ion-card-content>
-            <h3>2016 & Previous</h3>
-            <br/>
-            <h3>2017</h3>
-        </ion-card-content>
-    </ion-card>
-    <ion-card color="secondary">
-        <ion-card-header>
-            ID Total Amount
-            <br/>
-        </ion-card-header>
-        <ion-card-content>
-            <h3>2016 & Previous</h3>
-            <br/>
-            <h3>2017</h3>
-            <br/>
-            <h3>2018 & After</h3>
-        </ion-card-content>
-    </ion-card>
-      </div>
 </ion-content>

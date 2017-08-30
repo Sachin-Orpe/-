@@ -40,14 +40,14 @@ import {SharedService} from '../shared/sharedservice';
     MyApp,
     LoginPage,
     //HomePage,
-    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,
+    DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
     IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,SharedService
   ]
 })
 export class AppModule {}
