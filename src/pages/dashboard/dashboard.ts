@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController  } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
+
+import { BudgetPage } from '../budget/budget';
+import { PlanPage } from '../plan/plan';
+import { InvestmentDemandPage } from '../investmentdemand/investmentdemand';
 
 
 @Component({
@@ -8,10 +12,11 @@ import { NavController  } from 'ionic-angular';
 })
 export class DashboardPage {
   currentDocument = 0;
-  constructor(public navCtrl: NavController  ) {
+  constructor(public navCtrl: NavController,public events: Events  ) {
      //console.log(this.globalvars.buinfo.BUName);
 
   }
-
-
+  openPage(page) {
+    this.events.publish('capex:page',page);
+  }
 }
