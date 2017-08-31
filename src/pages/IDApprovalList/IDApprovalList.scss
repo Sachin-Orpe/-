@@ -1,0 +1,17 @@
+idapprovallist
+{
+    .item-md ion-avatar img{
+        width: 30px;
+        height:30px;
+    }
+    .label-md {
+	    margin: 3px 5px 3px 0;
+    }
+
+    .list-md {
+        margin: 0px 1px 0px;
+    }
+    .item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
+	margin: 2px 3px 2px 0;
+    }
+}

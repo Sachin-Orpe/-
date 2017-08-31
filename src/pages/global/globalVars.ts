@@ -27,3 +27,15 @@ var monthList=[ {id:1,Name:"Jan"},{id:2,Name:"Feb"},{id:3,Name:"Mar"},{id:4,Name
                 {id:9,Name:"Sept"},{id:10,Name:"Oct"},{id:11,Name:"Nov"},{id:12,Name:"Dec"}];
    return monthList;             
 }
+export function JsonDateToDate (value) {
+        if (String(value).indexOf("Date") > -1) {
+            value = String(value).replace("/", "");
+            value = String(value).replace("(", "");
+            value = String(value).replace(")", "");
+            value = String(value).replace("Date", "");
+            value = String(value).replace("/", "");
+            return new Date(parseFloat(value));
+        }        
+  return new Date(parseFloat(value))
+}
+export var avatarImgURL="http://whiteyellowpages.eworkplace.saint-gobain.com/Photos/SGID.jpg"
