@@ -132,7 +132,7 @@ export class MyApp {
               this.selectedYear=new Date().getFullYear();
               globalvars.buInfo.BUID=this.BUID;
               globalvars.buInfo.BUName=this.BUList.filter(x => x.id== this.BUID)[0].name;
-              this.avatarImgUrl =String(globalvars.avatarImgURL).replace("SGID",globalvars.userInfo.SGID);
+              this.avatarImgUrl =String(globalvars.avatarImgURL).replace("SGID",this.username);
            }
            else{
             this.nav.setRoot(LoginPage);
