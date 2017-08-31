@@ -41,6 +41,7 @@ export class MyApp {
   activePage=new Subject();
   hasLoggedIn:boolean;
   username:string;
+  avatarImgUrl:string;
   BUName:string;
   BUID: number = 1;
   BUList:Array<{id:number,name:string}>;
@@ -131,6 +132,7 @@ export class MyApp {
               this.selectedYear=new Date().getFullYear();
               globalvars.buInfo.BUID=this.BUID;
               globalvars.buInfo.BUName=this.BUList.filter(x => x.id== this.BUID)[0].name;
+              this.avatarImgUrl =String(globalvars.avatarImgURL).replace("SGID",globalvars.userInfo.SGID);
            }
            else{
             this.nav.setRoot(LoginPage);

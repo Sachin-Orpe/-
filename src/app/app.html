@@ -6,7 +6,7 @@
             <!-- <p class="name">Advita</p>
             <p class="e-mail">advita@email.com</p> -->
             <div padding>
-                <img class="user-avatar round" src="assets/images/avatar.png"/>
+                <img class="user-avatar round" [src]="avatarImgUrl"/>
                 <!-- <ion-icon  ios="ios-person" md="md-person" style="font-size: 5.0em;color:white;" ></ion-icon> -->
                 <h1 class="username">
                      Sachin Orpe<br/>
@@ -23,7 +23,6 @@
                 </ion-option>         
               </ion-select>    
           </ion-item>
-
           <ion-item>
               <ion-label>Year</ion-label>
               <ion-select [(ngModel)]="selectedYear">

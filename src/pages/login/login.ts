@@ -4,6 +4,7 @@ import { NavController, AlertController, LoadingController, Loading, Events } fr
 import { Storage } from '@ionic/storage';
 import { AuthService } from '../../providers/auth-service/auth-service'
 
+import * as globalvars from '../global/globalVars';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -16,7 +17,7 @@ export class LoginPage {
     'assets/images/background/background-2.jpg'
   ];
   account: { SGID: string, password: string } = {
-    SGID: 'test@example.com',
+    SGID: '',
     password:null// '123'
   };
   
@@ -36,6 +37,7 @@ export class LoginPage {
       this.showLoading()
       var res = this.authService.login(this.account);
       if(res){
+        globalvars.userInfo.SGID=this.account.SGID;
         this.loading.dismiss();   
         this.events.publish('user:login');
       }
