@@ -22,11 +22,11 @@ planningDetails : any;
     getMonth(month){
         if(month > 0)
             {
-        return this.monthList.filter(a=> a.id == month ).Name;
+              return this.monthList.filter(a=> a.id == month)[0].Name;
             }
-else{
-    return "";
-}
+        else{
+              return "";
+        }
     }
 
 }

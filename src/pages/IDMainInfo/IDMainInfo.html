@@ -1,59 +1,101 @@
-<ion-content>    
-<form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
-      <ion-item>
-        <ion-label>Reference No</ion-label>
-        <ion-label>{{mainInfoObj.ReferenceNo}}</ion-label>
-      </ion-item>
-     <ion-item>
-        <ion-label>Year</ion-label>
-        <ion-label>2017</ion-label>
-      </ion-item>
-    <ion-item>
-        <ion-label>Title </ion-label>
-        <ion-label>{{mainInfoObj.Title}}</ion-label>
-      </ion-item>
-    <ion-item>
-        <ion-label>Organization </ion-label>
-        <ion-label>{{mainInfoObj.OrgName}}</ion-label>
-      </ion-item>
-    <ion-item>
-        <ion-label>Project Level </ion-label>
-        <ion-label>{{mainInfoObj.ProjectLevelName}}</ion-label>
-      </ion-item>
-    <ion-item>
-        <ion-label>Project Type </ion-label>
-        <ion-label>{{mainInfoObj.ProjectTypeName}}</ion-label>
-      </ion-item>
-    <ion-item>
-        <ion-label>Class </ion-label>
-        <ion-label>{{mainInfoObj.ClassName}}</ion-label>
-      </ion-item>
-     <ion-item>
-        <ion-label>Domain  </ion-label>
-        <ion-label>{{mainInfoObj.DomainName}}</ion-label>
-      </ion-item>
-     <ion-item>
-        <ion-label>Family  </ion-label>
-        <ion-label>{{mainInfoObj.FamilyName}}</ion-label>
-      </ion-item>
-     <ion-item>
-        <ion-label>Activity  </ion-label>
-        <ion-label>{{mainInfoObj.ActivityName}}</ion-label>
-      </ion-item>
-      <ion-item [hidden]="mainInfoObj.EquipmentName.length == 0">
-        <ion-label>Equipment  </ion-label>
-        <ion-label>{{mainInfoObj.EquipmentName}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>End Market   </ion-label>
-        <ion-label>{{mainInfoObj.EndMarketName}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Currency   </ion-label>
-        <ion-label>{{mainInfoObj.CurrencyName}}</ion-label>
-      </ion-item> <ion-item>
-        <ion-label>Budget Type  </ion-label>
-        <ion-label>{{mainInfoObj.BudgetTypeName}}</ion-label>
-      </ion-item>
+<ion-content>
+    <ion-title padding>General Info</ion-title>
+    <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+        <ion-item>
+            <ion-label>Reference No</ion-label>
+            <ion-label>{{mainInfoObj.ReferenceNo}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Year</ion-label>
+            <ion-label>2017</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Title </ion-label>
+            <ion-label>{{mainInfoObj.Title}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Organization </ion-label>
+            <ion-label>{{mainInfoObj.OrgName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Project Level </ion-label>
+            <ion-label>{{mainInfoObj.ProjectLevelName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Project Type </ion-label>
+            <ion-label>{{mainInfoObj.ProjectTypeName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Class </ion-label>
+            <ion-label>{{mainInfoObj.ClassName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Domain </ion-label>
+            <ion-label>{{mainInfoObj.DomainName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Family </ion-label>
+            <ion-label>{{mainInfoObj.FamilyName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Activity </ion-label>
+            <ion-label>{{mainInfoObj.ActivityName}}</ion-label>
+        </ion-item>
+        <ion-item [hidden]="mainInfoObj.EquipmentName.length == 0">
+            <ion-label>Equipment </ion-label>
+            <ion-label>{{mainInfoObj.EquipmentName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>End Market </ion-label>
+            <ion-label>{{mainInfoObj.EndMarketName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Currency </ion-label>
+            <ion-label>{{mainInfoObj.CurrencyName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Budget Type </ion-label>
+            <ion-label>{{mainInfoObj.BudgetTypeName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Budget Total Amount</ion-label>
+            <ion-label>{{mainInfoObj.BudgetTotalAmount}}</ion-label>
+        </ion-item>
+        <ion-title padding>Business fields</ion-title>
+        <ion-item>
+            <ion-label>Deadline for main order</ion-label>
+            <ion-label>13/10/2017</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Target commisioning date</ion-label>
+            <ion-label>13/11/2017</ion-label>
+        </ion-item>
+        <ion-title padding>Forecast (in thousands)</ion-title>
+        <ion-item>
+            <ion-label>2016 & Before Amount</ion-label>
+            <ion-label>{{mainInfoObj.PrevYearAmount}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>2017 Year Amount</ion-label>
+            <ion-label>{{mainInfoObj.ThisYearAmount}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>2018 & After Amount</ion-label>
+            <ion-label>{{mainInfoObj.NextYearAmount}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Amount</ion-label>
+            <ion-label>{{mainInfoObj.PrevYearAmount + mainInfoObj.ThisYearAmount + mainInfoObj.NextYearAmount}}</ion-label>
+        </ion-item>
+          <ion-title padding>Remarks</ion-title>    
+           <ion-item>
+                <p>
+                    1. Safety improvement of traffic on the INVM gateway plant.\n      
+                       Pedestrian  traffic car traffic Trucks temporary parking improvement \n
+                    2. Traffic flow improvement including intensified traffic during Float 1  rebuild 
+                    3. Reduction of problems with blockin of entrance by persons waiting for drive access permit. 
+                    4. The project expenses shared with Sekurit DG 50:50
+                </p>              
+            </ion-item>
     </form>
 </ion-content>
