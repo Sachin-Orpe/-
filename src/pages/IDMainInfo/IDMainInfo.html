@@ -1,12 +1,12 @@
 <ion-content>    
 <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
-      <ion-item no-lines>
+      <ion-item>
         <ion-label>Reference No</ion-label>
         <ion-label>{{mainInfoObj.ReferenceNo}}</ion-label>
       </ion-item>
      <ion-item>
         <ion-label>Year</ion-label>
-        <ion-label>{{mainInfoObj.Year}}</ion-label>
+        <ion-label>2017</ion-label>
       </ion-item>
     <ion-item>
         <ion-label>Title </ion-label>
@@ -40,9 +40,9 @@
         <ion-label>Activity  </ion-label>
         <ion-label>{{mainInfoObj.ActivityName}}</ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item [hidden]="mainInfoObj.EquipmentName.length == 0">
         <ion-label>Equipment  </ion-label>
-        <ion-label>{{mainInfoObj.Year}}</ion-label>
+        <ion-label>{{mainInfoObj.EquipmentName}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>End Market   </ion-label>

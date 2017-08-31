@@ -6,10 +6,8 @@
                     <ion-icon name='menu'></ion-icon>
                 </button>
             </ion-col>
-            <ion-col col-9>                
-                    <i class="fa fa-user fa-lg"></i>
-                   <ion-title>Investment Demand
-                     </ion-title>                            
+            <ion-col col-9>  
+                   <ion-title>Investment Demand</ion-title> 
             </ion-col>
             <ion-col col-2 text-right>
                 <ion-buttons end>
@@ -27,7 +25,7 @@
         </ion-row>
     </ion-navbar>
 </ion-header>
-<ion-content padding color="primary">
+<ion-content padding >
     <ion-list no-line>
         <ion-item *ngFor="let item of filterdata" (click)="goToDetails(item)">
             <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}" padding>
