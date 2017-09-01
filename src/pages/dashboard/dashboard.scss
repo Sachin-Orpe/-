@@ -2,7 +2,7 @@ dashboard {
     
         .dashboard-stat {
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 12px;
             overflow: hidden;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
@@ -14,6 +14,7 @@ dashboard {
             position: absolute;
             right: 15px;
             padding-right: 15px;
+            padding-top: 10px;
         }
         .dashboard-stat .more {
             clear: both;
@@ -28,7 +29,7 @@ dashboard {
         }
     
         .dashboard-stat .visual > i {
-            margin-left: -35px;
+            margin-left: -30px;
             font-size: 110px;
             line-height: 110px;
         }
@@ -41,7 +42,7 @@ dashboard {
             float: left;
             padding-top: 10px;
             padding-left: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 13px;
             font-size: 35px;
             line-height: 35px;
         }

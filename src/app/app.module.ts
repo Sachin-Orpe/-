@@ -9,7 +9,7 @@ import { AuthService } from '../providers/auth-service/auth-service';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
-//import { HomePage } from '../pages/home/home';
+import { SplashPage } from '../pages/splash/splash';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PlanPage } from '../pages/plan/plan';
 import { BudgetPage } from '../pages/budget/budget';
@@ -24,11 +24,11 @@ import {SharedService} from '../shared/sharedservice';
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage,
-    //HomePage,
+    SplashPage,
+    LoginPage,    
     DashboardPage,
-    PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage
-    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage
+    PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
+    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -38,10 +38,10 @@ import {SharedService} from '../shared/sharedservice';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    SplashPage,
     LoginPage,
-    //HomePage,
     DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
-    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage    
+    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,    
   ],
   providers: [
     StatusBar,

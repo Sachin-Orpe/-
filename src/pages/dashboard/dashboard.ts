@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Events } from 'ionic-angular';
 
-import { BudgetPage } from '../budget/budget';
-import { PlanPage } from '../plan/plan';
-import { InvestmentDemandPage } from '../investmentdemand/investmentdemand';
-
 
 @Component({
   selector: 'dashboard',

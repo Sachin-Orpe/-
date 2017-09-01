@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NavController, AlertController, LoadingController, Loading, Events } from 'ionic-angular';
+import { MenuController, AlertController, LoadingController, Loading, Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { AuthService } from '../../providers/auth-service/auth-service'
 
@@ -11,16 +11,14 @@ import { AuthService } from '../../providers/auth-service/auth-service'
 export class LoginPage {
   loading: Loading;
 
-  backgrounds = [
-    'assets/images/background/background-1.jpg',
-    'assets/images/background/background-2.jpg'
-  ];
   account: { SGID: string, password: string } = {
     SGID: 'test@example.com',
     password:null// '123'
   };
-  
-  constructor(public navCtrl: NavController,
+  hasLoggedIn:boolean;
+  username:string;
+
+  constructor(public menu: MenuController,
     public authService: AuthService,
     private alertCtrl: AlertController, 
     private loadingCtrl:LoadingController,
@@ -30,7 +28,7 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   Login(form: NgForm) {    
-    // console.log(form);
+    //console.log(form);
     // console.log(this.account);
     if(form.valid){
       this.showLoading()
@@ -48,6 +46,7 @@ export class LoginPage {
   forgotPassword(){
     console.log('forgot password');
   }
+
   showLoading() {
     this.loading = this.loadingCtrl.create({
       content: 'Please wait...',
@@ -65,5 +64,37 @@ export class LoginPage {
       buttons: ['OK']
     });
     alert.present(prompt);
+  }
+
+  ionViewDidEnter() {
+    // the root left menu should be disabled on the tutorial page
+    this.menu.enable(false);
+    console.log('forgot password');
+    this.checkIsLogin();
+  }
+
+  ionViewWillLeave() {
+    // enable the root left menu when leaving the tutorial page
+    this.menu.enable(true);
+  }
+
+  checkIsLogin() {
+    console.log("------------>>checkIsLogin");
+    Promise.all([
+        this.authService.StorageGet("isLoggedIn", true).then((data:boolean) => 
+            { this.hasLoggedIn = data})
+        ,this.authService.StorageGet("username", null).then((data:string) => 
+        {
+          this.username = data;
+        })
+      ]).then(() => { 
+            console.log("checkIsLogin------------>> "+ this.hasLoggedIn);
+            console.log("checkIsLogin------------>> "+ this.username);
+            if(this.hasLoggedIn){
+              this.events.publish('user:login');
+           }
+         
+        });
+  
   }
 }

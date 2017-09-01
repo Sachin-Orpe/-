@@ -1,0 +1,38 @@
+.ios, .md {
+    
+       page-splash {
+    
+           .scroll-content {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
+           .content-md {
+            background-color: #4276a4;
+            }
+        
+           #imageContainer img {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            animation: animation 3100ms linear infinite both;
+            animation-delay: 1s;
+          }
+          h3{
+              color: white;
+          }
+       }
+        
+    @keyframes fadeInAndSpin {    
+        100% {
+            opacity: 1;
+            transform: rotate3d(1, 1, 0, 0deg);
+        }    
+    }
+    
+    @keyframes fadeIn {    
+        100% {
+            opacity: 1;
+        }
+    }
+}

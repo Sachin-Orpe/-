@@ -1,11 +1,7 @@
-<ion-menu [content]="Mycontent" id="menu-material" [hidden]="!isshowMenu">   
+<ion-menu [content]="Mycontent" id="menu-material">   
       <ion-content>
         <div class="menu-header">
-            <!--material-design-background-->
-            <!-- <img class="user-avatar round" src="assets/images/logo.png"/> -->
-            <!-- <p class="name">Advita</p>
-            <p class="e-mail">advita@email.com</p> -->
-            <div padding>
+            <div padding>                
                 <img class="user-avatar round" src="assets/images/avatar.png"/>
                 <!-- <ion-icon  ios="ios-person" md="md-person" style="font-size: 5.0em;color:white;" ></ion-icon> -->
                 <h1 class="username">
@@ -25,16 +21,18 @@
           </ion-item>
 
           <ion-item>
-              <ion-label>Year</ion-label>
-              <ion-select [(ngModel)]="selectedYear">
+            <ion-label>Year</ion-label>
+            <ion-select [(ngModel)]="selectedYear">
               <ion-option *ngFor="let y of YearList" value="{{y.ID}}">{{y.Name}}</ion-option>
-          </ion-select>  
+            </ion-select>
+           
           </ion-item>
-          
+          <!-- <hr> -->
           <button [ngClass]="m.active ? 'menu-md-background' : ''"
           menuClose="left" ion-item detail-none *ngFor="let m of pages" (click)="openPage(m)">
             <i class="{{m.icon}}"></i> 
             {{m.title}}
+            <!-- <hr> -->
           </button>              
 
         </ion-list>

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, MenuController, Nav, Events } from 'ionic-angular';
+import { Platform, MenuController, Nav, Events, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Subject } from 'rxjs';
@@ -9,6 +9,7 @@ import * as globalvars from '../pages/global/globalVars';
 import { MenuModel } from '../interfaces/MenuModel';
 import { AuthService } from '../providers/auth-service/auth-service'
 
+import { SplashPage } from '../pages/splash/splash';
 import { LoginPage } from '../pages/login/login';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { BudgetPage } from '../pages/budget/budget';
@@ -20,15 +21,13 @@ import { InvestmentDemandPage } from '../pages/investmentdemand/investmentdemand
 // import { IDApprovalListPage } from '../pages/IDApprovalList/IDApprovalList';
 
 
-
-
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
   @ViewChild(Nav) nav: Nav;  
-  rootPage = DashboardPage;
+  rootPage = LoginPage;
   pages: MenuModel[]= [
     { title: 'Dashboard', component: DashboardPage, active: true, icon: 'fa fa-home' },
     { title: 'Plan', component: PlanPage, active: false, icon: 'fa fa-flag'},
@@ -40,7 +39,7 @@ export class MyApp {
 
   activePage=new Subject();
   hasLoggedIn:boolean;
-  username:string;
+  username:string='';
   BUName:string;
   BUID: number = 1;
   BUList:Array<{id:number,name:string}>;
@@ -48,7 +47,6 @@ export class MyApp {
   selectedYear: number;
   YearList :any=[];
   currentDocument :number;
-  isshowMenu:boolean;
   
   constructor( public platform: Platform,
     public menu: MenuController,
@@ -56,20 +54,19 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public events: Events,
     public storage: Storage,
-    public authService: AuthService
+    public authService: AuthService,
+    public modalCtrl: ModalController,
   ) {
-     
-      this.initializeApp();
+      this.initializeApp(modalCtrl);
       this.listenToLoginEvents();
-      this.getInfo();
   }
 
-  initializeApp() {
+  initializeApp(modalCtrl) {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      //this.splashScreen.hide();
+      let splash = modalCtrl.create(SplashPage);
+      splash.present();
     });
   }
 
@@ -96,7 +93,6 @@ export class MyApp {
 
     this.events.subscribe('user:logout', () => {
       this.storage.set('isLoggedIn', false);
-      this.isshowMenu=false;
       this.nav.setRoot(LoginPage);
     });
   }
@@ -125,7 +121,6 @@ export class MyApp {
             console.log("isLoggedIn------------>> "+ this.hasLoggedIn);
             console.log("username------------>> "+ this.username);
             if(this.hasLoggedIn){
-              this.isshowMenu=true;
               this.BUList=globalvars.businessUnitList;
               this.YearList=globalvars.yearList;
               this.selectedYear=new Date().getFullYear();
@@ -137,13 +132,8 @@ export class MyApp {
            }         
             
         });
-   
   
   }
 
-  ngOnInit (){
-      
-  }
-  
 }
 
