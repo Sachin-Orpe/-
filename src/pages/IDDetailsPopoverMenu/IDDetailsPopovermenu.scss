@@ -1,0 +1,17 @@
+iddetailspopovermenu{
+
+    $popover-wp-width : 150px;
+    $popover-md-width : 150px;   
+    $popover-ios-width:	150px; 
+    .item-md,.item-ios,.item-wp
+    {
+        background-color: inherit;
+        color:white;
+    }
+    .list-md,.list-ios,.list-wp {
+        margin: -1px 0px 2px;
+        background-color:color($colors,menu-dark);
+        opacity: 0.8;
+    }
+    
+}

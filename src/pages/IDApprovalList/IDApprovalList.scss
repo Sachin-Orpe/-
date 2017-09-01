@@ -1,0 +1,24 @@
+idapprovallist
+{
+    .item-md ion-avatar img,.item-ios ion-avatar img,.item-wp ion-avatar img{
+        width: 30px;
+        height:30px;
+    }
+    .label-ios,.label-md,.label-wp {
+        margin: 3px 5px 3px 0;
+        white-space: normal;    
+    }
+
+    .list-md,.list-ios,.list-wp {
+        margin: 0px 1px 0px;
+    }
+    .item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
+	margin: 2px 3px 2px 0;
+    }
+    .item-ios ion-avatar[item-left], .item-ios ion-thumbnail[item-left], .item-ios ion-avatar[item-start], .item-ios ion-thumbnail[item-start] {
+	margin: 2px 3px 2px 0;
+    }
+.item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
+	margin: 2px 3px 2px 0;
+    }
+}

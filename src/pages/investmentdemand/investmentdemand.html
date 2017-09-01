@@ -28,10 +28,12 @@
 <ion-content padding >
     <ion-list no-line>
         <ion-item *ngFor="let item of filterdata" (click)="goToDetails(item)">
-            <div style="border-left-width:5px;border-left-style:solid;padding:5px;" [ngStyle]="{'border-left-color': getstylecolor(item)}" padding>
-                <h3>{{ item.ReferenceNo }} - {{ item.Title }}</h3>
-                <h5>{{ item.OrgName}} ({{item.TotalAmount}} K {{item.CurrencyName}}) </h5>
-            </div>
+            <ion-badge item-start [ngStyle]="{'background-color': getstylecolor(item)}">F</ion-badge>
+            <h2>{{ item.ReferenceNo }} - {{ item.Title }}</h2>
+            <p>{{ item.OrgName}} ({{item.TotalAmount}} K {{item.CurrencyName}}) </p>           
         </ion-item>
     </ion-list>
+    <ion-fab right bottom>
+        <button ion-fab mini color="secondary" (click)="openNew()"><ion-icon name="add"></ion-icon></button>
+     </ion-fab>
 </ion-content>

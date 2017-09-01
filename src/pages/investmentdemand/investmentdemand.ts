@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,AlertController  } from 'ionic-angular';
 
 import { InvestmentDemandDetailsPage } from '../IDdetails/investmentdemanddetails';
 
@@ -19,7 +19,7 @@ export class InvestmentDemandPage implements OnInit {
   filterdata:any=[];
   searchText : string='';
   //globalvars :any;
-  constructor(public navCtrl: NavController ) {    
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController) {    
       this.BUName = globalvars.buInfo.BUName;
       this.initializeItems();
       this.filterdata = this.items;
@@ -57,6 +57,15 @@ getItems(ev: any) {
   goToDetails(Record)
   {
     this.navCtrl.push(InvestmentDemandDetailsPage,{recordObj:Record});    
+  }
+  openNew()
+  {
+    let alert = this.alertCtrl.create({
+      title: 'New Capex',
+      subTitle: 'A form to create a new Capex',
+      buttons: ['OK']
+    });
+    alert.present();  
   }
 
 }

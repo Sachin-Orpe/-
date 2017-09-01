@@ -4,6 +4,7 @@ import { MenuController, AlertController, LoadingController, Loading, Events } f
 import { Storage } from '@ionic/storage';
 import { AuthService } from '../../providers/auth-service/auth-service'
 
+import * as globalvars from '../global/globalVars';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -12,7 +13,7 @@ export class LoginPage {
   loading: Loading;
 
   account: { SGID: string, password: string } = {
-    SGID: 'test@example.com',
+    SGID: '',
     password:null// '123'
   };
   hasLoggedIn:boolean;
@@ -34,6 +35,7 @@ export class LoginPage {
       this.showLoading()
       var res = this.authService.login(this.account);
       if(res){
+        globalvars.userInfo.SGID=this.account.SGID;
         this.loading.dismiss();   
         this.events.publish('user:login');
       }
