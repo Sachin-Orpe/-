@@ -86,7 +86,9 @@ $list-wp-margin-right:15px;
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
-
+$popover-wp-width : 150px;
+$popover-md-width : 150px;   
+$popover-ios-width:	150px; 
 @import "ionic.theme.default";
 @import "CustomStyle";
 
