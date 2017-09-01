@@ -7,4 +7,21 @@ investmentdemand{
         left: 6px !important;
         top: 5px !important;
     }
+    .list-md,.list-ios,.list-wp
+    {
+	    margin: -1px 5px 6px;
+    }
+    .item-md,.item-md,.item-md
+    {
+        padding-left: 0px;
+    }
+    .badge-md ,.badge-ios,.item-wp
+    {
+        border-radius: 20px;	
+        padding: 10px 13px;
+    }
+    .item-md p,.item-ios p,.item-wp p
+    {       
+        white-space: normal;
+    }
 }
