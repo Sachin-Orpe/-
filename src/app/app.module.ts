@@ -19,6 +19,7 @@ import { IDMainInfoPage } from '../pages/IDMainInfo/IDMainInfo';
 import { IDFilesPage } from '../pages/IDFiles/IDFiles';
 import { IDApprovalListPage } from '../pages/IDApprovalList/IDApprovalList';
 import { IDPlanningDetailsPage } from '../pages/IDPlanningDetails/IDPlanningDetails';
+import { IDDetailsPopovermenuPage } from '../pages/IDDetailsPopoverMenu/IDDetailsPopovermenu';
 
 import {SharedService} from '../shared/sharedservice';
 @NgModule({
@@ -28,7 +29,8 @@ import {SharedService} from '../shared/sharedservice';
     //HomePage,
     DashboardPage,
     PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage
-    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage
+    ,IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,
+    IDDetailsPopovermenuPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import {SharedService} from '../shared/sharedservice';
     LoginPage,
     //HomePage,
     DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
-    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage    
+    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,IDDetailsPopovermenuPage    
   ],
   providers: [
     StatusBar,

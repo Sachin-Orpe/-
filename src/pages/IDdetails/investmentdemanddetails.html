@@ -3,13 +3,13 @@
         <ion-title>Investment Demand Details
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only color="white-text" >
+            <button ion-button icon-only color="white-text" (click)="presentPopover($event)">
                 <ion-icon name="more"></ion-icon>
             </button>
-        </ion-buttons>   
+        </ion-buttons> 
     </ion-navbar>
 </ion-header>
-<ion-content>    
+<ion-content >    
     <ion-tabs class="tabs-basic" selectedIndex="0" >
       <ion-tab tabTitle="Main Info" [root]="tabPage1" [rootParams]="RecordObj"></ion-tab>
       <ion-tab tabTitle="Files" [root]="tabPage2" tabBadge="{{documentCount}}" tabBadgeStyle="danger" ></ion-tab>
