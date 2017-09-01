@@ -1,13 +1,15 @@
 investmentdemanddetails {
     .tab-badge {	
         right:15%;
-        padding: 1px 6px;	
+        padding: 4px 6px;	
         font-size: 10px;
         line-height: 10px;
+        border-radius: 20px;
+        text-align: center;
         top:auto;
     }
-    .badge-ios-danger {
-    top:13px;
+    .badge-ios-danger,.badge-md-danger,.badge-wp-danger {
+        top:11px;
     }
 
 }
