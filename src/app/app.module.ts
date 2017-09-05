@@ -22,6 +22,10 @@ import { IDPlanningDetailsPage } from '../pages/IDPlanningDetails/IDPlanningDeta
 import { IDDetailsPopovermenuPage } from '../pages/IDDetailsPopoverMenu/IDDetailsPopovermenu';
 
 import {SharedService} from '../shared/sharedservice';
+
+import { StringToDatePipe } from '../Pipe/stringTodate';
+import { ListAvtarName } from  '../Pipe/listAvatarName';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +34,8 @@ import {SharedService} from '../shared/sharedservice';
     DashboardPage,
     PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
     IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,
-    IDDetailsPopovermenuPage
+    IDDetailsPopovermenuPage,
+    StringToDatePipe,ListAvtarName
   ],
   imports: [
     BrowserModule,

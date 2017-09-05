@@ -1,36 +1,43 @@
-<ion-header color="menu-dark">
+<ion-header>
     <ion-navbar color="menu-dark">
-        <ion-row>
-            <ion-col col-1 text-left>
-                <button ion-button menuToggle icon-only>
-                    <ion-icon name='menu'></ion-icon>
-                </button>
-            </ion-col>
-            <ion-col col-9>  
-                   <ion-title>Investment Demand</ion-title> 
-            </ion-col>
-            <ion-col col-2 text-right>
-                <ion-buttons end>
-                <button ion-button icon-only color="white-text" >
-                    <ion-icon name="more"></ion-icon>
-                </button>
-                </ion-buttons>
-            </ion-col> 
-        </ion-row>            
-        <ion-row>
-            <ion-col col-12>
-                <ion-searchbar [(ngModel)]="searchText" placeholder="Type Ref No/Title" [showCancelButton]="shouldShowCancel" (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
-                </ion-searchbar>
-            </ion-col>
-        </ion-row>
+        <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Investment Demand</ion-title>
+        <ion-buttons end>
+            <button id="notification-button" ion-button icon-only clear>
+                <ion-icon name="notifications">
+                  <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+                </ion-icon>                                     
+            </button>
+            <button ion-button icon-only color="white-text" (click)="advanceFilter($event)">
+                <ion-icon> 
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                 </ion-icon>
+            </button>
+        </ion-buttons> 
+            
     </ion-navbar>
+    <ion-toolbar color="menu-dark">
+            <ion-searchbar [(ngModel)]="searchText" 
+            placeholder="Search Refrence no/Title"
+            [showCancelButton]="shouldShowCancel" 
+            (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
+           </ion-searchbar>
+    </ion-toolbar>
 </ion-header>
-<ion-content padding >
+<ion-content>
     <ion-list no-line>
         <ion-item *ngFor="let item of filterdata" (click)="goToDetails(item)">
-            <ion-badge item-start [ngStyle]="{'background-color': getstylecolor(item)}">F</ion-badge>
+            <ion-badge item-start [ngStyle]="{'background-color': getstylecolor(item.ValidationLevelColor)}">
+                {{ item.ValidationLevelName | listAvtarName }}
+            </ion-badge>
             <h2>{{ item.ReferenceNo }} - {{ item.Title }}</h2>
-            <p>{{ item.OrgName}} ({{item.TotalAmount}} K {{item.CurrencyName}}) </p>           
+            <p>{{ item.OrgName}}</p>
+            <div id="itemDetails" class="item">
+                <span class="pull-left"> {{item.TotalAmount}} K {{item.CurrencyName}}</span>
+                <span class="pull-right">{{item.ModifiedDate | stringToDatePipe | date:'dd MMM' }}</span>
+            </div>
         </ion-item>
     </ion-list>
     <ion-fab right bottom>
