@@ -1,5 +1,8 @@
 dashboard {
-    
+
+        .stat{
+            padding:0px 16px;
+        }
         .dashboard-stat {
             display: block;
             margin-bottom: 12px;
@@ -9,6 +12,7 @@ dashboard {
             -ms-border-radius: 4px;
             -o-border-radius: 4px;
             border-radius: 4px;
+            margin: 10px;
         }
         .details {
             position: absolute;
@@ -129,6 +133,24 @@ dashboard {
             opacity: 1;
             filter: alpha(opacity=100);
         }
-    
-    }
+        
+        .item-md{
+            padding-left: 0px;
+        }
+        .item-inner{
+            margin-left: 2px !important;
+            color: #82949a;
+        }
+        
+        .label-md {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin: 13px 8px 9px 0;
+          }
+  
+        // .item-md p{
+        //     white-space: normal;
+        // }
+       
+}
     
