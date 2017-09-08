@@ -10,7 +10,7 @@
                   <ion-badge id="notifications-badge" color="danger">5</ion-badge>
                 </ion-icon>                                     
             </button>
-            <button ion-button icon-only color="white-text" (click)="advanceFilter($event)">
+            <button ion-button icon-only color="white-text" (click)="advanceFilter()">
                 <ion-icon> 
                     <i class="fa fa-filter" aria-hidden="true"></i>
                  </ion-icon>
@@ -20,7 +20,7 @@
     </ion-navbar>
     <ion-toolbar color="menu-dark">
             <ion-searchbar [(ngModel)]="searchText" 
-            placeholder="Search Refrence no/Title"
+            placeholder="Search Reference no or title"
             [showCancelButton]="shouldShowCancel" 
             (ionInput)="getItems($event)" (ionCancel)="onCancel($event)">
            </ion-searchbar>

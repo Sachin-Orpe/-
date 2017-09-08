@@ -67,5 +67,13 @@ getItems(ev: any) {
     });
     alert.present();  
   }
-
+  advanceFilter()
+  {
+    let alert = this.alertCtrl.create({
+      title: 'Filters',
+      subTitle: 'A form to apply fliters',
+      buttons: ['OK']
+    });
+    alert.present();  
+  }
 }

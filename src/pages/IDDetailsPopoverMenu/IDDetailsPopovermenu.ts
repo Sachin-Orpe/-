@@ -11,6 +11,7 @@ export class IDDetailsPopovermenuPage {
 
     constructor(private navParams: NavParams) {
      this.recordID =this.navParams.get('RecordID');     
+     console.log("DetailsPopovermenu :" +String(this.recordID));
     }
 
     ngOnInit() {

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
-import { DatePipe } from '@angular/common';
-
 import * as globalvars from '../global/globalVars';
 
 @Component({
@@ -11,7 +9,9 @@ import * as globalvars from '../global/globalVars';
 
 export class IDApprovalListPage {
 
-apprvSumList : any;
+ apprvSumList : any;
+
+    defaultImagePath : string = '../../assets/images/avatar.png';
 
     constructor(public params: NavParams)
     {
@@ -22,6 +22,7 @@ apprvSumList : any;
     }
     getAvatar(sgid)
     {
-       return String(globalvars.avatarImgURL).replace("SGID",sgid);         
+       this.defaultImagePath =String(globalvars.avatarImgURL).replace("SGID",sgid);
+       return this.defaultImagePath;         
     }
 }

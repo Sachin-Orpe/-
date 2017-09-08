@@ -48,7 +48,7 @@ import { ListAvtarName } from  '../Pipe/listAvatarName';
     SplashPage,
     LoginPage,
     DashboardPage,PlanPage,BudgetPage,InvestmentDemandPage,InvestmentDemandDetailsPage,
-    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,IDDetailsPopovermenuPage    
+    IDMainInfoPage,IDFilesPage,IDApprovalListPage,IDPlanningDetailsPage,IDDetailsPopovermenuPage
   ],
   providers: [
     StatusBar,

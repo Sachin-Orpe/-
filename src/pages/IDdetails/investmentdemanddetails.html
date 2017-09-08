@@ -1,6 +1,6 @@
 <ion-header color="menu-dark">
     <ion-navbar color="menu-dark">
-        <ion-title>Investment Demand Details
+        <ion-title>Investment Details
         </ion-title>
         <ion-buttons end>
             <button ion-button icon-only color="white-text" (click)="presentPopover($event)">
@@ -11,9 +11,9 @@
 </ion-header>
 <ion-content >    
     <ion-tabs class="tabs-basic" selectedIndex="0" >
-      <ion-tab tabTitle="Main Info" [root]="tabPage1" [rootParams]="RecordObj"></ion-tab>
+      <ion-tab tabTitle="Info" [root]="tabPage1" [rootParams]="RecordObj"></ion-tab>
       <ion-tab tabTitle="Docs" [root]="tabPage2" tabBadge="{{documentCount}}" tabBadgeStyle="danger" ></ion-tab>
-      <ion-tab tabTitle="Planning Dates" [root]="tabPage3" [rootParams]="RecordObj"></ion-tab>
-      <ion-tab tabTitle="Approval Summary" [root]="tabPage4" ></ion-tab> -->
+      <ion-tab tabTitle="Planning" [root]="tabPage3" [rootParams]="RecordObj"></ion-tab>
+      <ion-tab tabTitle="Approvals" [root]="tabPage4" ></ion-tab> -->
     </ion-tabs>   
 </ion-content>

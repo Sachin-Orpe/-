@@ -36,7 +36,7 @@ export class MyApp {
   activePage=new Subject();
   hasLoggedIn:boolean;
   username:string='';
-  avatarImgUrl:string;
+  avatarImgUrl:string="assets/images/avatar.png";
   BUName:string;
   BUID: number = 1;
   BUList:Array<{id:number,name:string}>;
