@@ -28,6 +28,7 @@ var monthList=[ {id:1,Name:"Jan"},{id:2,Name:"Feb"},{id:3,Name:"Mar"},{id:4,Name
                 {id:9,Name:"Sept"},{id:10,Name:"Oct"},{id:11,Name:"Nov"},{id:12,Name:"Dec"}];
    return monthList;             
 }
+
 export function JsonDateToDate (value) {
         if (String(value).indexOf("Date") > -1) {
             value = String(value).replace("/", "");
@@ -39,4 +40,12 @@ export function JsonDateToDate (value) {
         }        
   return new Date(parseFloat(value))
 }
+
 export var avatarImgURL="http://whiteyellowpages.eworkplace.saint-gobain.com/Photos/SGID.jpg"
+
+export var recentActivities=[{"ID":744,"Activity":"Atul CHAVAN Approved Investment Demand No.170115","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":289},{"ID":743,"Activity":"Shailesh MIRAJKAR Approved Investment Demand No.170115","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":289},{"ID":742,"Activity":"Gautam Shanbhag Approved Investment Demand No.170115","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":289},{"ID":741,"Activity":"Vikas PANDEY Approved Investment Demand No.170115","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":289},{"ID":740,"Activity":"Atul CHAVAN Approved Investment Demand No.170114","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":288},{"ID":739,"Activity":"Pramod Kolte Approved Investment Demand No.170114","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":288},{"ID":738,"Activity":"Gautam Shanbhag Approved Investment Demand No.170114","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":288},{"ID":737,"Activity":"Vikas PANDEY Approved Investment Demand No.170114","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":288},{"ID":736,"Activity":"Atul CHAVAN Re-submitted Investment Demand No.170113","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":287},{"ID":735,"Activity":"Atul CHAVAN Approved Investment Demand No.170113","ActivityDate":"42 days","Category":"InvestmentDemand","CategoryID":287}];
+
+export var announcementList=[
+  {id:1,name:'This is he first announcement for investment demand.'},
+  {id:3,name:'This is he secound announcement.'}
+];
