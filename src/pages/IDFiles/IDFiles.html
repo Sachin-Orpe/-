@@ -1,13 +1,16 @@
 <ion-content>
-<ion-title padding>Documents</ion-title>  
-<ion-list *ngFor="let header of fileHeader;let i=index" no-lines>
-  <ion-list-header>
-   {{header.DocumentFileType}}
-  </ion-list-header>
-  <ion-item  no-lines>
-    <ion-col col-6 padding>CapexFile{{i+1}}.xlsx</ion-col>
-    <ion-col col-6 padding>CapexFile{{i+2}}.docx</ion-col>    
-    </ion-item > 
-</ion-list>
-
+    <ion-card>
+        <ion-card-header class="header">Documents</ion-card-header>
+        <ion-card-content>
+            <ion-list *ngFor="let header of fileHeader;let i=index" no-lines>
+                <ion-list-header>
+                    {{header.DocumentFileType}}
+                </ion-list-header>
+                <ion-item item-starts no-lines>
+                  <ion-label>CapexFile{{i+1}}.xlsx</ion-label>
+                  <ion-label>CapexFile{{i+2}}.docx</ion-label>                    
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

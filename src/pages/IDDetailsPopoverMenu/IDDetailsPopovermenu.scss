@@ -5,13 +5,20 @@ iddetailspopovermenu{
     $popover-ios-width:	150px; 
     .item-md,.item-ios,.item-wp
     {
-        background-color: inherit;
+        background-color:color($colors,menu-dark);
         color:white;
     }
     .list-md,.list-ios,.list-wp {
-        margin: -1px 0px 2px;
-        background-color:color($colors,menu-dark);
+        margin: -1px 0px 3px;
+        background-color:white;
         opacity: 0.8;
+    }
+    a {
+        color:white;
+    }
+
+    .label-md,.label-ios,.label-wp {
+        margin: 8px;
     }
     
 }

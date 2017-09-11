@@ -6,7 +6,9 @@ idapprovallist
     }
     .label-ios,.label-md,.label-wp {
         margin: 3px 5px 3px 0;
-        white-space: normal;    
+        white-space: normal;        
+        font-size: 1.6rem;
+        font-weight: normal;
     }
 
     .list-md,.list-ios,.list-wp {
@@ -20,5 +22,8 @@ idapprovallist
     }
     .item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
 	margin: 2px 3px 2px 0;
+    }
+    .card-content-md,.card-content-ios,.card-content-wp {
+        padding: 5px 5px;
     }
 }

@@ -1,7 +1,11 @@
 idplanningdetails{
-.row
-{
-    border-bottom:1px solid silver;
-}
+    .row
+    {
+        border-bottom:1px solid silver;
+    }
+    .label-ios,.label-md,.label-wp
+    {
+        margin: 1px 1px 1px 0;
+    }
     
 }

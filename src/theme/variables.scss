@@ -49,6 +49,8 @@ $colors: (
 $text-color: #000;
 $content-padding:10px;
 
+$toast-width:90%;
+
 //$outer-content-md-background-color :red; 
 $action-sheet-ios-background:#FFFFCC;
 $action-sheet-md-background:#FFFFCC;
@@ -63,15 +65,17 @@ $searchbar-ios-input-search-icon-color : #244c5e;
 $searchbar-ios-input-height:3.9rem;
 $list-ios-margin-left:15px;
 $list-ios-margin-right:15px;
+$toast-ios-background :#32db64;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-$menu-md-background:#FFFFCC;
+$menu-md-background: #FFFFCC;
 $searchbar-md-padding-top : 0px;
 $searchbar-md-input-search-icon-color : #244c5e;
 $searchbar-md-input-height:3.9rem;
 $list-md-margin-left:15px;
 $list-md-margin-right:15px;
+$toast-md-background :#32db64;
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
@@ -81,6 +85,7 @@ $searchbar-wp-input-search-icon-color : #244c5e;
 $searchbar-wp-input-height:3.9rem;
 $list-wp-margin-left:15px;
 $list-wp-margin-right:15px;
+$toast-wp-background :#32db64;
 // App Theme
 // --------------------------------------------------
 // Ionic apps can have different themes applied, which can
