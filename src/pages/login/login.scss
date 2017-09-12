@@ -3,53 +3,55 @@ page-login {
   
 .scroll-content {
   margin-top: 0 !important;
-  background-color: #6E7673;//#56CA96;
+  background-color: #578ebe;//#56CA96;
 }
 
-.logo {
-  height: auto;
-  padding-top: 9vh;
-  margin-bottom: 13vh;
-}
+
 span {
   color: white;
 }
 
 ion-item {
-  color: white !important;
+  color: black !important;
   padding-left: 10px !important;
   margin-bottom: 10px;
   background-color: transparent !important;
   font-size: 0.9em;
 }
  ::-webkit-input-placeholder {
-  color: white !important;
+  color: black !important;
 }
 
 .login-container {
-  color: white;
+  color: black;
   position: absolute;
   top: 0;
   padding: 10vw;
   text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  z-index: 2;
+  width: 100%;  
+  margin-top: 20%;
 }
 
 ion-button {
   opacity: 0.8;
 }
 
-.forgetPwd-btn{
-  color: #ffffff !important;
-  font-size: 0.8em;
-}
-
-.login-btn{
-  background: #ea6e6e;
-  // border-radius: 30px !important;
-  border: 1px solid #ffffff;
-  width: 60%;
-}
+  .list-md {  
+      margin: 51px 15px 16px;
+      margin-bottom: 16px;
+  }
+  .login-btn{    
+    background-color: color($colors,secondary);
+  }
+  .card-header-md,.card-header-ios,.card-header-wp {    
+        font-size: 2.6rem;
+        color: #000000;    
+    }
+    .logo {
+      // padding: .5em;
+      //height: 10vh;
+      height: 100px;      
+      width: 50%;
+      margin-left: 24% 
+    }
 }

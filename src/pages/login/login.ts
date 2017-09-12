@@ -13,7 +13,7 @@ export class LoginPage {
   loading: Loading;
 
   account: { SGID: string, password: string } = {
-    SGID: '',
+    SGID: 'S9163091',
     password:null// '123'
   };
   hasLoggedIn:boolean;
@@ -40,7 +40,7 @@ export class LoginPage {
         this.events.publish('user:login');
       }
       else{
-        this.showError("Access Denied");
+        this.showError("Login failed.");
       }
     }
   }

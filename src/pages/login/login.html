@@ -2,34 +2,32 @@
         <ion-header no-border>
             <ion-navbar transparent></ion-navbar>
         </ion-header>
-        <div class="login-container">
-           <img class="logo" src="assets/images/logo.png">
-           <form #loginForm="ngForm">
-                <ion-list>
-                    <ion-item color="menu-light">
-                        <ion-input [(ngModel)]="account.SGID" name="SGID" 
-                        type="text" spellcheck="false" 
-                        autocapitalize="off"  placeholder="SGID"
-                        required></ion-input> 
-                    </ion-item>
-                    <ion-item color="menu-light">
-                        <ion-input [(ngModel)]="account.password" name="password" 
-                        type="password" placeholder="Password" required>
-                        </ion-input>
-                    </ion-item>
-
-                    <button ion-button margin (click)="Login(loginForm)"
-                    [disabled]="!loginForm.form.valid" class="login-btn">
-                    Login</button>
-                
-                </ion-list> 
-                
-                <button ion-button class="forgetPwd-btn" 
-                block clear (click)="forgotPassword()">
-                        Forgot Password?</button>
-            </form>
-                      
+        <div class="login-container">           
+            <ion-card>                
+                <ion-card-header text-center> 
+                    <img class="logo round" src="assets/images/logo.png">
+                </ion-card-header>
+                <ion-card-content>                    
+                    <form #loginForm="ngForm">
+                        <ion-list>
+                            <ion-item color="menu-light">
+                                    <ion-label >SGID</ion-label>
+                                <ion-input [(ngModel)]="account.SGID" name="SGID" type="text" spellcheck="false" autocapitalize="off"  required></ion-input>
+                            </ion-item>
+                            <ion-item color="menu-light">
+                                    <ion-label >Password</ion-label>
+                                <ion-input [(ngModel)]="account.password" name="password" type="password"  required>
+                                </ion-input>
+                            </ion-item>
+                            <ion-item color="menu-light" text-center>
+                                    <button ion-button block (click)="Login(loginForm)" [disabled]="!loginForm.form.valid" class="login-btn">
+                                    Login</button>
+                                    <a href="#" block (click)="forgotPassword()">
+                                            Forgot Password?</a>
+                            </ion-item>              
+                        </ion-list>                       
+                    </form>
+                </ion-card-content>
+            </ion-card>
         </div>
-                
-</ion-content>
-      
+    </ion-content>
