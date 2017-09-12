@@ -83,7 +83,7 @@ export class MyApp {
     this.events.subscribe('user:login', () => {
       this.getInfo();
       let capexMenu=this.pages;
-      var page=capexMenu.find(p=>p.component === DashboardPage);
+      //var page=capexMenu.find(p=>p.component === DashboardPage);
       //this.openPage(page);
       this.nav.setRoot(DashboardPage);
     });
