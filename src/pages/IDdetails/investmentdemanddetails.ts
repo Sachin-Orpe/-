@@ -20,7 +20,7 @@ export class InvestmentDemandDetailsPage implements OnDestroy {
 
 subscription: Subscription;
 RecordObj:any;
-documentCount : number = 0;
+documentCount : number = 9;
 tabPage1:any;
 tabPage2:any;
 tabPage3:any;

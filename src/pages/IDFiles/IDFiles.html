@@ -7,8 +7,8 @@
                     {{header.DocumentFileType}}
                 </ion-list-header>
                 <ion-item item-starts no-lines>
-                  <ion-label>CapexFile{{i+1}}.xlsx</ion-label>
-                  <ion-label>CapexFile{{i+2}}.docx</ion-label>                    
+                  <ion-label [hidden]="i%2==0 && i > 3"><a href="#" style="text-decoration:none;" (click)="startDownload()" >CapexFile{{i+1}}.xlsx</a>     </ion-label>             
+                    <ion-label [hidden]="i%2==1"><a href="#" style="text-decoration:none;" (click)="startDownload()">CapexFile{{i+2}}.docx</a></ion-label>                    
                 </ion-item>
             </ion-list>
         </ion-card-content>

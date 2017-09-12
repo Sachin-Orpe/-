@@ -84,8 +84,8 @@ export class MyApp {
       this.getInfo();
       let capexMenu=this.pages;
       var page=capexMenu.find(p=>p.component === DashboardPage);
-      this.openPage(page);
-      
+      //this.openPage(page);
+      this.nav.setRoot(DashboardPage);
     });
 
     this.events.subscribe('user:logout', () => {
