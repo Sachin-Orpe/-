@@ -3,7 +3,7 @@ page-login {
   
 .scroll-content {
   margin-top: 0 !important;
-  background-color: #578ebe;//#56CA96;
+  background-color: #E0E0E0//#578ebe;//#56CA96;
 }
 
 
@@ -37,11 +37,11 @@ ion-button {
 }
 
   .list-md {  
-      margin: 41px 15px 16px;
+      margin: 11px 15px 16px;
       margin-bottom: 16px;
   }
-  .login-btn{   
-    width: 100%; 
+  .login-btn{
+    width: 60%;
     background-color: color($colors,primary);
     margin-top:8px;
   }
@@ -50,17 +50,25 @@ ion-button {
         color: #000000;    
     }
     .logo {
-      height: 60px;
-      width: 30%;
-      margin-left: 34%;
+      //height: 60px;
+      //width: 30%;
+      height:auto;
+      width:auto;
     }
     .text-input-md {
-          padding-top: 6px;
-          padding-bottom: 6px;
+          padding-top: 5px;
+          padding-bottom: 5px;
       }
 
   .item-md .item-button {
         padding: 16px;        
         font-size: 1.5rem;
     }  
+    .card-header-md,.card-header-ios,.card-header-wp { 
+      color: #FFF;     
+      padding: 16px 20px;
+      text-align: left;
+      background-color: #578ebe;
+      border-radius: 4px;
+  }
 }
